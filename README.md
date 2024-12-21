@@ -29,7 +29,22 @@ Enter your choice: _
 ```
 ### 3rd Page ~ 1
 ```
+                           ADMIN LOGIN                      
+*************************************************************
 
+
+ Enter Admin Passkey: _
+
+
+*************************************************************
+
+
+
+                     
+
+```
+### 3rd Page ~ 1.2
+```
                             ADMIN MODE             
 =============================================================
                            Events Menu                      
@@ -45,6 +60,9 @@ Enter your choice: _
 Enter your choice: _
 
 
+```
+### 3rd Page ~ 1.3
+```
 
                         EVENT BOOKINGS                     
 -------------------------------------------------------------
@@ -58,7 +76,7 @@ Press any key to return...
 
 
 ```
-### 3rd Page ~ 2
+### 3rd Page ~ 2.1
 ```
 
                             USER MODE             
@@ -75,6 +93,10 @@ Press any key to return...
 
 Enter your choice: _
 
+
+```
+### 3rd Page ~ 2.2
+```
 
                             USER MODE             
 =============================================================
@@ -91,6 +113,9 @@ Enter your choice: _
 Do you want to book a ticket ? (y/n) 
 
 
+```
+### 3rd Page ~ 2.3
+```
                            TICKET BOOKING                    
 -------------------------------------------------------------
  ID:  [Generated Randomly]    Do not share these infos with anyone                      
