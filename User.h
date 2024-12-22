@@ -1,9 +1,7 @@
 #ifndef USER_H
 #define USER_H
-
 #include <string>
 #include <iostream>
-
 using namespace std;
 
 class User {
@@ -17,8 +15,8 @@ public:
     string eventID;
 
     User();
-    User(string Uid, string Fname, string Email, string Phone, string Evid);
-
+    User(string Uid, string Fname, string email, string fon, string Evid);
+    User getUserinfo();
     string getId() const;
     void setId(const string& Uid);
 
@@ -29,8 +27,8 @@ public:
     void setEmail(const string& Email);
 
     string getPhone() const;
-    void setPhone(const string& Phone);
-
+    void setPhone(const string& fon);
+    
     void inputDetails();
     void saveToFile(int eventID);
 };
