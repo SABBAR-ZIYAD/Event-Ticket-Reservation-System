@@ -6,21 +6,13 @@
 
 using namespace std;
 
-User::User() : id(""), fullName(""), email(""), phone(""), eventID("") {}
+User::User() : fullName(""), email(""), phone("") {}
 
-User::User(string Uid, string Fname, string email, string fon, string Evid)
-    : id(Uid), fullName(Fname), email(email), phone(fon), eventID(Evid) {}
+User::User(string Fname, string email, string fon)
+    : fullName(Fname), email(email), phone(fon) {}
 
 User User::getUserinfo() {
-    return User(id, fullName, email, phone, eventID);
-}
-
-string User::getId() const { 
-    return id; 
-}
-
-void User::setId(const string& Uid) { 
-    id = Uid; 
+    return User(fullName, email, phone);
 }
 
 string User::getFullName() const { 
@@ -36,11 +28,12 @@ string User::getEmail() const {
 }
 
 void User::setEmail(const string& Email) {
-    if (Email.find('@') != string::npos) {
-        email = Email;
-    } else {
+    while (Email.find('@') == string::npos) {
         cout << "Invalid email! Please try again.\n";
+        cout << "Enter Email: ";
+        getline(cin, email);
     }
+    email = Email;
 }
 
 string User::getPhone() const { 
@@ -48,11 +41,12 @@ string User::getPhone() const {
 }
 
 void User::setPhone(const string& Phone) {
-    if (Phone.size() == 10 && all_of(Phone.begin(), Phone.end(), ::isdigit)) {
-        phone = Phone;
-    } else {
-        cout << "Invalid phone number!" << endl;
+    while (Phone.size() != 10 || !all_of(Phone.begin(), Phone.end(), ::isdigit)) {
+        cout << "Invalid phone number! Please try again.\n";
+        cout << "Enter Phone: ";
+        getline(cin, phone);
     }
+    phone = Phone;
 }
 
 void User::inputDetails() {
@@ -73,6 +67,4 @@ void User::inputDetails() {
     setPhone(tempPhone);
 }
 
-void User::saveToFile(int eventID) {
-    cout << "Saving user details to file... \n";
-}
+

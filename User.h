@@ -6,20 +6,16 @@ using namespace std;
 
 class User {
 private:
-    string id;
     string fullName;
     string email;
     string phone;
 
 public:
-    string eventID;
 
     User();
-    User(string Uid, string Fname, string email, string fon, string Evid);
+    User( string Fname, string email, string fon);
     User getUserinfo();
-    string getId() const;
-    void setId(const string& Uid);
-
+    
     string getFullName() const;
     void setFullName(const string& Fname);
 
@@ -28,9 +24,7 @@ public:
 
     string getPhone() const;
     void setPhone(const string& fon);
-    
     void inputDetails();
-    void saveToFile(int eventID);
 };
 
 #endif
